@@ -27,3 +27,9 @@ body{
     width: calc(210mm - (10mm * 2));
     margin: 0 auto;
 }
+
+h1{
+    font-size: 32px;
+    margin: 0;
+    padding: 0;
+}

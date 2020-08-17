@@ -5,3 +5,18 @@
      /* change the margins as you want them to be. */
 }
 
+
+/* .container{
+    height: 842px;
+    width: 595px;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: antiquewhite;
+} */
+
+.container{
+    height:297mm;
+    width:210mm;
+    margin: 0 auto;
+    background-color: antiquewhite;
+}

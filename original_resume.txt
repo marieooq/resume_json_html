@@ -1,0 +1,45 @@
+MARIE OTAKI / Software Developer
+
+Portfolio - https://marieotaki.com/
+GitHub - https://github.com/marieooq
+LinkedIn - https://www.linkedin.com/in/marieotaki/
+
+Email - otakimarie@gmail.com
+Phone - (236) 512-4416
+Address - Vancouver, BC.
+
+SUMMARY
+Front-end developer who is passionate about building web applications in JavaScript (including React) and also hands-on User Experience (UX) design. Has gained over three years of experience optimizing UI performance for web and mobile. Skilled in JavaScript, React, Redux,  jQuery, TypeScript, Node.js,  HTML5, CSS3, SaSS, Mongodb, MySQL
+
+WORK EXPERIENCE
+Frontend Developer(Contract) | COS Educational Consulting Inc. | May 2020  - Present  | Vancouver, BC
+・COS Educational Consulting Inc.is a study abroad agency. It offers recruiting / immigration services to local partners
+・Revised the website to help website upgrade usability with WordPress, HTML, CSS, and JavaScript.
+
+Web Designer | Xing Corporation | March 2018  - March 2019  | Tokyo, Japan
+Xing Corporation is the second-largest company provides karaoke machine and software related to karaoke.
+・Maintain the content on its corporate website using HTML, CSS, and JavaScript.
+・Created banners using Adobe Photoshop and Illustrator.
+
+Web Designer | Self-Employed | May 2016  - July 2017 | Tokyo, Japan
+・Built a website from scratch using HTML5, CSS3, and JavaScript.
+・Designed business cards using Adobe Illustrator and Photoshop.
+
+Executive Assistant | Yahoo Japan Corporation | August 2017  - February 2018 | Tokyo, Japan
+Sales Lead | Retty Inc.| May 2015  - April 2016 | Tokyo, Japan
+System Administrator | NTT DATA Getronics Corporation | April 2014  - May 2015 | Tokyo, Japan
+
+PROJECTS
+Msgif https://msgif.net/
+A GIF generator that converts messages into GIF. It got 315 upvotes on Product Hunt. (as of February 29th, 2020)   React  / Redux
+
+Stock Price List https://github.com/marieooq/stock-price-list
+A SPA application that enables to display the stock price.   React / TypeScript / Ant Design
+
+CRUD Application https://github.com/marieooq/final-node-blog
+A CRUD blog application that enables users to create, read, update, and delete the post of the blog. 
+React / Node.js / MongoDB
+
+EDUCATION
+Web and Mobile App Development Diploma | Cornerstone International Community College of Canada | 2019  - 2020 | Vancouver, BC
+Bachelor of Arts | Kyoto Women’s University | 2010  - 2014 | Kyoto, Japan

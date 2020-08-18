@@ -8,6 +8,7 @@
 
 body{
     background-color: rgb(77, 76, 76);
+    font-family: 'PT Sans', sans-serif;
 }
 
 .header_line{
@@ -33,9 +34,28 @@ h1{
     color: #545454
 }
 
+h2{
+    font-size: 20px;
+    margin: 0 0 2mm 0;
+    padding: 0;
+}
+
+h3{
+    font-size: 16px;
+    margin: 0 0 1mm 0;
+    padding: 0;
+}
+
+h4{
+    font-size: 14px;
+    margin: 0;
+    padding: 0;
+    font-style: italic;
+}
+
 .section{
     border-bottom: 1px solid #a6a6a6;
-    padding-bottom: 3mm;
+    padding: 3mm 0;
 }
 
 .contact{
@@ -53,7 +73,7 @@ ul.contact_ul{
     list-style: none;
     margin: 0;
     padding: 0;
-    font-size: 9px;
+    font-size: 14px;
 }
 
 ul.contact_ul li{
@@ -67,4 +87,19 @@ ul.contact_ul li span{
 
 ul.contact_ul li span a{
     color: #454545;
+}
+.summary p{
+    margin: 0;
+    padding: 0;
+    font-size: 14px;
+}
+
+.career{
+    margin-bottom: 2mm;
+}
+
+ul.career_ul{
+    margin: 0;
+    /* padding: 0; */
+    font-size: 14px;
 }

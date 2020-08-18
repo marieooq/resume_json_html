@@ -19,12 +19,18 @@ $(document).ready(function () {
 
         for (let i = 0; i < data.contact.length; i++) {
           const title = data.contact[i].item_title;
-          const content = data.contact[i].item_content;
+          const content = data.contact[ i ].item_content;
 
-          const li = $('<li>', { text: title });
-          const span = $('<span>', {
-            text: ' - ' + content,
-          });
+          const li = $('<li>', { text: title + " - " });
+          const span = $('<span>');
+            const a = $('<a>', {
+              text: content,
+              href: content,
+              target: '_blank',
+            });
+            
+            
+          span.append(a);
           li.append(span);
 
           if (i < 3) {
@@ -124,7 +130,6 @@ $(document).ready(function () {
 
       //insert an education section
       if (data.education){
-          console.log(data.education);
           const title = data.education.title;
           const h2 = $('<h2>', { text: title });
           $('.education').append(h2);

@@ -33,11 +33,16 @@ h1{
     color: #545454
 }
 
+.section{
+    border-bottom: 1px solid #a6a6a6;
+    padding-bottom: 3mm;
+}
+
 .contact{
     display: flex;
-    border-bottom: 1px solid #a6a6a6;
+    /* border-bottom: 1px solid #a6a6a6; */
     color: #454545;
-    padding-bottom: 3mm;
+    /* padding-bottom: 3mm; */
 }
 
 .contact_left{

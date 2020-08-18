@@ -22,28 +22,38 @@ $(document).ready(function () {
                 console.log(data.contact[ i ]);
                 if (i === 0)
                 {
-                    left = document.createElement('div');
-                    left.className = 'contact_left"';
-                    
-                    ul = document.createElement('ul');
-                    ul.className = 'contact_ul';    
+                    left = $('<div class="contact_left">');
+                    ul = $('<ul class="contact_ul">');
                 }
 
-                const li = document.createElement('li');
-                const span = document.createElement('span');
-                li.textContent = data.contact[ i ].item_title;
-                span.textContent = data.contact[ i ].item_content;
-                li.appendChild(span);
-                ul.appendChild(li);
-                
+                // const li = document.createElement('li');
+                // const span = document.createElement('span');
+                // li.textContent = data.contact[ i ].item_title;
+                // span.textContent = data.contact[ i ].item_content;
+                // li.appendChild(span);
+                // ul.appendChild(li);
+                const title = data.contact[ i ].item_title;
+
+                const str_title = title
+                const li = $('<li>', { text: str_title });
+                const span = $('<span>', {
+                  text: data.contact[i].item_content,
+                });
+                console.log({ li });
+                console.log({ span });
+
+
+                // console.log(typeof data.contact[i].item_content);
+                li.append(span);
+                ul.append(li);
             }
 
-            console.log(ul)
-            left.appendChild(ul);
+            console.log({ ul });
+
+            // console.log(ul)
+            left.append(ul);
 
             $('.contact').append(left);
-            
-            
         }
       
       // for (var i in data) {

@@ -11,7 +11,7 @@ $(document).ready(function () {
         }
 
         
-        // insert a contact list   
+        // insert a contact section   
         if (data.contact)
         {
             const left = $('<div>', { class: 'contact_left' });
@@ -22,7 +22,6 @@ $(document).ready(function () {
 
             for (let i = 0; i < data.contact.length; i++)
             {
-                console.log(data.contact[ i ]);
                 const title = data.contact[i].item_title;
                 const content = data.contact[i].item_content;
 
@@ -47,6 +46,19 @@ $(document).ready(function () {
 
             $('.contact').append(left);
             $('.contact').append(right);
+        }
+
+
+        //insert a summary section
+        if (data.summary)
+        {
+          console.log(data.summary.content);
+            const title = data.summary.title;
+            const content = data.summary.content;
+            const h2 = $('<h2>', { text: title });
+            const p = $('<p>', { text: content })
+            $('.summary').append(h2);
+            $('.summary').append(p);
         }
       
       // for (var i in data) {

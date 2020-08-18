@@ -104,18 +104,56 @@ $(document).ready(function () {
             }
 
         }
+
+        //insert a projects section
+        if (data.projects)
+        {
+            console.log(data.projects);
+            if (data.projects.title)
+            {
+                const title = data.projects.title;
+                const h2 = $('<h2>', { text: title });
+                $('.projects').append(h2);
+            }
+
+            if (data.projects.project_list)
+            {
+                const project = $('<div>', { class: 'project'});
+                const project_list = data.projects.project_list;
+                console.log(project_list)
+                for (let i = 0; i < project_list.length; i++)
+                {
+                    console.log(project_list[i]);
+
+                    const project_name = project_list[i].project_name;
+                    const project_url = project_list[ i ].project_url;
+                    const description = project_list[ i ].description;
+
+
+                    const h3 = $('<h3>', { text: project_name });
+                    
+                    const span = $('<span>');
+                    const a = $('<a>', {
+                      text: " " + project_url,
+                      href: project_url,
+                      target: "_blank"
+                    });
+
+                    
+                    const p = $('<p>', { text: description });
+                    
+
+                    span.append(a);
+                    h3.append(span);
+                    project.append(h3, p);
+                    
+
+                }
+                $('.projects').append(project);
+            }
+
+            
+        }
       
-      // for (var i in data) {
-      //   $('#output').append('<li><strong>' + data[i].division + '</strong></li>');
-      //   for (var j in data[i].person) {
-      //     $('#output').append(
-      //       '<li>' +
-      //         data[i].person[j].name +
-      //         '（' +
-      //         data[i].person[j].age +
-      //         '才）</li>n'
-      //     );
-      //   }
-      // }
     });
 });

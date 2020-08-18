@@ -14,46 +14,39 @@ $(document).ready(function () {
         // insert a contact list   
         if (data.contact)
         {
-            let ul;
-            let left;
+            const left = $('<div>', { class: 'contact_left' });
+            const left_ul = $('<ul>', { class: 'contact_ul' });
+            
+            const right = $('<div>', { class: 'contact_right' });
+            const right_ul = $('<ul>', { class: 'contact_ul' });
 
             for (let i = 0; i < data.contact.length; i++)
             {
                 console.log(data.contact[ i ]);
-                if (i === 0)
-                {
-                    left = $('<div class="contact_left">');
-                    ul = $('<ul class="contact_ul">');
-                }
+                const title = data.contact[i].item_title;
+                const content = data.contact[i].item_content;
 
-                // const li = document.createElement('li');
-                // const span = document.createElement('span');
-                // li.textContent = data.contact[ i ].item_title;
-                // span.textContent = data.contact[ i ].item_content;
-                // li.appendChild(span);
-                // ul.appendChild(li);
-                const title = data.contact[ i ].item_title;
-
-                const str_title = title
-                const li = $('<li>', { text: str_title });
+                const li = $('<li>', { text: title });
                 const span = $('<span>', {
-                  text: data.contact[i].item_content,
+                  text: ' - ' + content,
                 });
-                console.log({ li });
-                console.log({ span });
-
-
-                // console.log(typeof data.contact[i].item_content);
                 li.append(span);
-                ul.append(li);
+
+                if (i < 3)
+                {
+                    left_ul.append(li);
+                } else
+                {
+                    right_ul.append(li);
+                }
+                
             }
 
-            console.log({ ul });
-
-            // console.log(ul)
-            left.append(ul);
+            left.append(left_ul);
+            right.append(right_ul)
 
             $('.contact').append(left);
+            $('.contact').append(right);
         }
       
       // for (var i in data) {

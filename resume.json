@@ -38,8 +38,8 @@
         "career": [
             {
                 "title": "Frontend Developer(Contract) | COS Educational Consulting Inc. | May 2020  - Present  | Vancouver, BC",
-                "company_description": "Frontend Developer(Contract) | COS Educational Consulting Inc. | May 2020  - Present  | Vancouver, BC",
-                "achievements": "Revised the website to help website upgrade usability with WordPress, HTML, CSS, and JavaScript."
+                "company_description": "COS Educational Consulting Inc.is a study abroad agency. It offers recruiting / immigration services to local partners",
+                "achievements": ["Revised the website to help website upgrade usability with WordPress, HTML, CSS, and JavaScript."]
             },
             {
                 "title": "Web Designer | Xing Corporation | March 2018  - March 2019  | Tokyo, Japan",

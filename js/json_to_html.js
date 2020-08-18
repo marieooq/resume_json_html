@@ -51,12 +51,58 @@ $(document).ready(function () {
         //insert a summary section
         if (data.summary)
         {
-          console.log(data.summary.content);
             const title = data.summary.title;
             const content = data.summary.content;
             const h2 = $('<h2>', { text: title });
             const p = $('<p>', { text: content })
             $('.summary').append(h2, p);
+        }
+
+        //insert a work experience section
+        if (data.work_experience)
+        {
+
+            const title = data.work_experience.title;
+            const h2 = $('<h2>', { text: title });
+            $('.work_experience').append(h2);
+
+            const careers = data.work_experience.career;
+
+            for (let i = 0; i < careers.length; i++)
+            {
+                const div = $('<div>', { class: 'career' });
+                
+                if (careers[i].title)
+                {
+                    const job_title = careers[ i ].title;
+                    const h3 = $('<h3>', { text: job_title });
+                    div.append(h3);
+                }
+                if (careers[ i ].company_description)
+                {
+                    const company_description = careers[ i ].company_description;
+                    const h4 = $('<h4>', { text: company_description });
+                    div.append(h4);
+                }
+                
+                if (careers[ i ].achievements)
+                {
+                    const ul = $('<ul>', {class: 'career_ul'});
+                    const achievements = careers[ i ].achievements;
+                    
+                    for (let j = 0; j < achievements.length; j++)
+                    {
+                        const achievement = achievements[ j ];
+                        const li = $('<li>', { text: achievement })
+                        ul.append(li)
+                    }
+                    div.append(ul);
+                }
+
+                $('.work_experience').append(div);
+                
+            }
+
         }
       
       // for (var i in data) {

@@ -22,22 +22,26 @@ function displayContactSection (data)
         const title = data.contact[i].item_title;
         const content = data.contact[i].item_content;
 
-        const li = $('<li>', { text: title + ' - ' });
-        const span = $('<span>');
-        const a = $('<a>', {
-          text: content,
-          href: content,
-          target: '_blank',
-        });
+          const li = $('<li>', { text: title + ' - ' });
+          
+          if (i < 3)
+          {
+              const span = $('<span>');
+              const a = $('<a>', {
+                text: content,
+                href: content,
+                target: '_blank',
+              });
 
-        span.append(a);
-        li.append(span);
-
-        if (i < 3) {
-          left_ul.append(li);
-        } else {
-          right_ul.append(li);
-        }
+              span.append(a);
+              li.append(span);
+              left_ul.append(li);
+          } else
+          {
+              const span = $('<span>', { text: content });
+              li.append(span);
+              right_ul.append(li);
+          }
       }
 
       left.append(left_ul);

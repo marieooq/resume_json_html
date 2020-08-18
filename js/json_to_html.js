@@ -44,8 +44,7 @@ $(document).ready(function () {
             left.append(left_ul);
             right.append(right_ul)
 
-            $('.contact').append(left);
-            $('.contact').append(right);
+            $('.contact').append(left, right);
         }
 
 
@@ -57,8 +56,7 @@ $(document).ready(function () {
             const content = data.summary.content;
             const h2 = $('<h2>', { text: title });
             const p = $('<p>', { text: content })
-            $('.summary').append(h2);
-            $('.summary').append(p);
+            $('.summary').append(h2, p);
         }
       
       // for (var i in data) {

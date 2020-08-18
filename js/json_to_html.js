@@ -108,7 +108,6 @@ $(document).ready(function () {
         //insert a projects section
         if (data.projects)
         {
-            console.log(data.projects);
             if (data.projects.title)
             {
                 const title = data.projects.title;
@@ -118,13 +117,11 @@ $(document).ready(function () {
 
             if (data.projects.project_list)
             {
-                const project = $('<div>', { class: 'project'});
+                
                 const project_list = data.projects.project_list;
-                console.log(project_list)
                 for (let i = 0; i < project_list.length; i++)
                 {
-                    console.log(project_list[i]);
-
+                    const project = $('<div>', { class: 'project' });
                     const project_name = project_list[i].project_name;
                     const project_url = project_list[ i ].project_url;
                     const description = project_list[ i ].description;
@@ -146,10 +143,10 @@ $(document).ready(function () {
                     span.append(a);
                     h3.append(span);
                     project.append(h3, p);
-                    
+                    $('.projects').append(project);
 
                 }
-                $('.projects').append(project);
+                
             }
 
             

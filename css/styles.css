@@ -4,6 +4,10 @@
     margin: 15mm 20mm 20mm 15mm;
      /* change the margins as you want them to be. */
 }
+:root{
+    --dark_black: #454545;
+    --light_blak: #545454;
+}
 
 
 body{
@@ -22,6 +26,7 @@ body{
     width:210mm;
     margin: 0 auto;
     background-color: #fff;
+    color: var(--light_blak);
 }
 
 .inner{
@@ -31,19 +36,21 @@ body{
 
 h1{
     font-size: 32px;
-    color: #545454
+    color: var(--dark_black);
 }
 
 h2{
     font-size: 20px;
     margin: 0 0 2mm 0;
     padding: 0;
+    color: var(--dark_black);
 }
 
 h3{
     font-size: 16px;
     margin: 0 0 1mm 0;
     padding: 0;
+    color: var(--dark_black);
 }
 
 h4{
@@ -61,7 +68,7 @@ h4{
 .contact{
     display: flex;
     /* border-bottom: 1px solid #a6a6a6; */
-    color: #454545;
+    color: var(--dark_black);
     /* padding-bottom: 3mm; */
 }
 
@@ -86,7 +93,7 @@ ul.contact_ul li span{
 }
 
 ul.contact_ul li span a{
-    color: #454545;
+    color: var(--dark_black);
 }
 .summary p{
     margin: 0;
@@ -120,7 +127,7 @@ ul.career_ul{
 
 .project h3 span a{
     font-size: 16px;
-    color: #454545;
+    color: var(--dark_black);
 }
 
 .project p{

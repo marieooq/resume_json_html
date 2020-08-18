@@ -108,7 +108,7 @@ function displayProjectsSection(projects) {
 
       const span = $('<span>');
       const a = $('<a>', {
-        text: ' ' + project_url,
+        text: `  ${project_url}`,
         href: project_url,
         target: '_blank',
       });
@@ -137,7 +137,7 @@ function displayEducationSection(education) {
 
   for (let i = 0; i < educational_background.length; i++) {
     const major = educational_background[i].major;
-    const description = ' ' + educational_background[i].description;
+    const description = ` ${educational_background[i].description}`;
     const h3 = $('<h3>');
     const span = $('<span>', { text: major });
     h3.append(span, description);

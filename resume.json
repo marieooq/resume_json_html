@@ -85,14 +85,16 @@
             "description": "A CRUD blog application that enables users to create, read, update, and delete the post of the blog. React / Node.js / MongoDB"
         }
     ]},
-    "education" : [
+    "education" : {
+        "title": "EDUCATION",
+        "educational_background" :[
         {
             "major" : "Web and Mobile App Development Diploma",
-            "about_college" : "| Cornerstone International Community College of Canada | 2019  - 2020 | Vancouver, BC"
+            "description" : "| Cornerstone International Community College of Canada | 2019  - 2020 | Vancouver, BC"
         },
         {
             "major": "Bachelor of Arts",
-            "about_college": "| Kyoto Women’s University | 2010  - 2014 | Kyoto, Japan"
+            "description": "| Kyoto Women’s University | 2010  - 2014 | Kyoto, Japan"
         }
-    ]
+    ]}
 }

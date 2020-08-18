@@ -103,3 +103,35 @@ ul.career_ul{
     /* padding: 0; */
     font-size: 14px;
 }
+
+.project{
+    padding: 0 0 2mm 0;
+}
+
+.project h3{
+    font-size: 20px;
+    margin: 0;
+    padding: 0;
+}
+
+.project h3 span{
+    margin-left: 1mm;
+}
+
+.project h3 span a{
+    font-size: 16px;
+    color: #454545;
+}
+
+.project p{
+    font-size: 14px;
+    margin: 0;
+    padding: 0;
+}
+
+.education h3{
+    font-weight: lighter;
+}
+.education h3 span{
+    font-weight: bold;
+}

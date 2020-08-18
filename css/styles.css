@@ -7,6 +7,9 @@
 :root{
     --dark_black: #454545;
     --light_blak: #545454;
+    --font_size_1: 20px;
+    --font_size_2: 16px;
+    --font_size_3: 14px;
 }
 
 
@@ -31,30 +34,32 @@ body{
 
 .inner{
     width: calc(210mm - (10mm * 2));
-    margin: 0 auto;
+    margin: 15mm auto;
 }
 
-h1{
-    font-size: 32px;
+h1#title{
+    font-size: 36px;
     color: var(--dark_black);
+    margin: 0;
+    padding: 0;
 }
 
 h2{
-    font-size: 20px;
+    font-size: var(--font_size_1);
     margin: 0 0 2mm 0;
     padding: 0;
     color: var(--dark_black);
 }
 
 h3{
-    font-size: 16px;
+    font-size: var(--font_size_2);
     margin: 0 0 1mm 0;
     padding: 0;
     color: var(--dark_black);
 }
 
 h4{
-    font-size: 14px;
+    font-size: var(--font_size_3);
     margin: 0;
     padding: 0;
     font-style: italic;
@@ -80,7 +85,7 @@ ul.contact_ul{
     list-style: none;
     margin: 0;
     padding: 0;
-    font-size: 14px;
+    font-size: var(--font_size_3);
 }
 
 ul.contact_ul li{
@@ -98,7 +103,7 @@ ul.contact_ul li span a{
 .summary p{
     margin: 0;
     padding: 0;
-    font-size: 14px;
+    font-size: var(--font_size_3);
 }
 
 .career{
@@ -108,7 +113,7 @@ ul.contact_ul li span a{
 ul.career_ul{
     margin: 0;
     /* padding: 0; */
-    font-size: 14px;
+    font-size: var(--font_size_3);
 }
 
 .project{
@@ -116,7 +121,7 @@ ul.career_ul{
 }
 
 .project h3{
-    font-size: 20px;
+    font-size: var(--font_size_1);
     margin: 0;
     padding: 0;
 }
@@ -126,12 +131,12 @@ ul.career_ul{
 }
 
 .project h3 span a{
-    font-size: 16px;
+    font-size: var(--font_size_2);
     color: var(--dark_black);
 }
 
 .project p{
-    font-size: 14px;
+    font-size: var(--font_size_3);
     margin: 0;
     padding: 0;
 }

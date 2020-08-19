@@ -1,8 +1,16 @@
+/**
+ * display a title of a resume
+ * @param {string} title
+ */
 function displayTitle(title) {
   if (!title) return;
   $('#title').append(title);
 }
 
+/**
+ * display a contact section
+ * @param {object} contact
+ */
 function displayContactSection(contact) {
   if (!contact) return;
   const left = $('<div>', { class: 'contact_left' });
@@ -41,6 +49,10 @@ function displayContactSection(contact) {
   $('.contact').append(left, right);
 }
 
+/**
+ * display a summary section
+ * @param {object} summary
+ */
 function displaySummarySection(summary) {
   if (!summary) return;
   const title = summary.title;
@@ -50,6 +62,10 @@ function displaySummarySection(summary) {
   $('.summary').append(h2, p);
 }
 
+/**
+ * display a work experience section
+ * @param {object} work_experience
+ */
 function displayWorkExperienceSection(work_experience) {
   if (!work_experience) return;
   const title = work_experience.title;
@@ -88,6 +104,10 @@ function displayWorkExperienceSection(work_experience) {
   }
 }
 
+/**
+ * display a projects section
+ * @param {object} projects
+ */
 function displayProjectsSection(projects) {
   if (!projects) return;
   if (projects.title) {
@@ -124,8 +144,8 @@ function displayProjectsSection(projects) {
 }
 
 /**
- *
- * @param education
+ * display a education section
+ * @param {object} education
  */
 function displayEducationSection(education) {
   if (!education) return;

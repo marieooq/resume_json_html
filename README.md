@@ -2,15 +2,13 @@
 
 ## :book: How to use
 
-This is an application that convert a resume file into HTML code.
-Once you put a jSON file in the root, the `js/json_to_html.js`convert it into HTML code.
+This is an application that converts a resume file into HTML code.<br>
+Once you put a jSON file in the root, the `js/json_to_html.js`convert it into HTML code.<br>
 You can see the resume on browsers and print it as well.
 
 ## :warning: Note
 
-You need to convert your resume into a jSON file in advance. 
-Then, name the file 'resume.json' and put it in the root.
-
+You need to convert your resume into a jSON file in advance. Then, name the file 'resume.json' and put it in the root.<br>
 Here is an exapmle of the structure of a jSON file.
 
 ```

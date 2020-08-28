@@ -1,23 +1,20 @@
 $(function () {
-  $.getJSON('../resume.json', function (data) {
-    //display a title
-    displayTitle(data.title);
-
-    // display a contact section
-    displayContactSection(data.contact);
-
-    //display a summary section
-    displaySummarySection(data.summary);
-
-    //display a work experience section
-    displayWorkExperienceSection(data.work_experience);
-
-    //display a projects section
-    displayProjectsSection(data.projects);
-
-    //display an education section
-    displayEducationSection(data.education);
-  });
+  fetch('../resume.json')
+    .then((response) => response.json())
+    .then((data) => {
+      //display a title
+      displayTitle(data.title);
+      // display a contact section
+      displayContactSection(data.contact);
+      //display a summary section
+      displaySummarySection(data.summary);
+      //display a work experience section
+      displayWorkExperienceSection(data.work_experience);
+      //display a projects section
+      displayProjectsSection(data.projects);
+      //display an education section
+      displayEducationSection(data.education);
+    });
 });
 
 /**
@@ -36,7 +33,7 @@ function displayTitle(title) {
 function displayContactSection(contact) {
   if (!contact) return;
 
-  contact.forEach((val, index)=> {
+  contact.forEach((val, index) => {
     const title = val.itemTitle;
     const content = val.itemContent;
 
@@ -58,7 +55,7 @@ function displayContactSection(contact) {
       li.append(span);
       $('.contact-right .contact-ul').append(li);
     }
-  })
+  });
 }
 
 /**
@@ -85,8 +82,7 @@ function displayWorkExperienceSection(workExperience) {
 
   const careers = workExperience.career;
 
-  careers.forEach(careerVal =>{
-
+  careers.forEach((careerVal) => {
     const jobTitle = careerVal.title;
     if (careerVal.title) {
       const jobTitle = careerVal.title;
@@ -104,14 +100,14 @@ function displayWorkExperienceSection(workExperience) {
       const ul = $('<ul>', { class: 'career-ul' });
       const achievements = careerVal.achievements;
 
-      achievements.forEach(achievementsVal => {
+      achievements.forEach((achievementsVal) => {
         const li = $('<li>', { text: achievementsVal });
         ul.append(li);
-      })
+      });
 
       $('.career').append(ul);
     }
-  })
+  });
 }
 
 /**
@@ -127,7 +123,7 @@ function displayProjectsSection(projects) {
   if (projects.projectList) {
     const projectList = projects.projectList;
 
-    projectList.forEach(val => {
+    projectList.forEach((val) => {
       const project = $('<div>', { class: 'project' });
       const projectName = val.projectName;
       const projectUrl = val.projectUrl;
@@ -148,7 +144,7 @@ function displayProjectsSection(projects) {
       h3.append(span);
       project.append(h3, p);
       $('.projects').append(project);
-    })
+    });
   }
 }
 
@@ -163,12 +159,12 @@ function displayEducationSection(education) {
 
   const educationalBackground = education.EducationalBackground;
 
-  educationalBackground.forEach(val => {
+  educationalBackground.forEach((val) => {
     const major = val.major;
     const description = ` ${val.description}`;
     const h3 = $('<h3>');
     const span = $('<span>', { text: major });
     h3.append(span, description);
     $('.education').append(h3);
-  })
+  });
 }

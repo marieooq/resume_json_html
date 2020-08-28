@@ -35,11 +35,6 @@ function displayTitle(title) {
  */
 function displayContactSection(contact) {
   if (!contact) return;
-  const left = $('<div>', { class: 'contact-left' });
-  const leftUl = $('<ul>', { class: 'contact-ul' });
-
-  const right = $('<div>', { class: 'contact_right' });
-  const rightUl = $('<ul>', { class: 'contact-ul' });
 
   contact.forEach((val, index)=> {
     const title = val.item_title;
@@ -57,18 +52,13 @@ function displayContactSection(contact) {
 
       span.append(a);
       li.append(span);
-      leftUl.append(li);
+      $('.contact-left .contact-ul').append(li);
     } else {
       const span = $('<span>', { text: content });
       li.append(span);
-      rightUl.append(li);
+      $('.contact-right .contact-ul').append(li);
     }
   })
-
-  left.append(leftUl);
-  right.append(rightUl);
-
-  $('.contact').append(left, right);
 }
 
 /**
@@ -79,9 +69,9 @@ function displaySummarySection(summary) {
   if (!summary) return;
   const title = summary.title;
   const content = summary.content;
-  const h2 = $('<h2>', { text: title });
-  const p = $('<p>', { text: content });
-  $('.summary').append(h2, p);
+
+  $('.summary h2').text(title);
+  $('.summary p').text(content);
 }
 
 /**
@@ -91,23 +81,23 @@ function displaySummarySection(summary) {
 function displayWorkExperienceSection(workExperience) {
   if (!workExperience) return;
   const title = workExperience.title;
-  const h2 = $('<h2>', { text: title });
-  $('.work-experience').append(h2);
+  $('.work-experience h2').text(title);
 
   const careers = workExperience.career;
 
   careers.forEach(careerVal =>{
-    const div = $('<div>', { class: 'career' });
 
+    const jobTitle = careerVal.title;
     if (careerVal.title) {
       const jobTitle = careerVal.title;
       const h3 = $('<h3>', { text: jobTitle });
-      div.append(h3);
+      $('.career').append(h3);
     }
+
     if (careerVal.company_description) {
       const companyDescription = careerVal.company_description;
       const h4 = $('<h4>', { text: companyDescription });
-      div.append(h4);
+      $('.career').append(h4);
     }
 
     if (careerVal.achievements) {
@@ -119,10 +109,8 @@ function displayWorkExperienceSection(workExperience) {
         ul.append(li);
       })
 
-      div.append(ul);
+      $('.career').append(ul);
     }
-
-    $('.work-experience').append(div);
   })
 }
 
@@ -132,11 +120,9 @@ function displayWorkExperienceSection(workExperience) {
  */
 function displayProjectsSection(projects) {
   if (!projects) return;
-  if (projects.title) {
-    const title = projects.title;
-    const h2 = $('<h2>', { text: title });
-    $('.projects').append(h2);
-  }
+
+  const title = projects.title;
+  $('.projects h2').text(title);
 
   if (projects.project_list) {
     const projectList = projects.project_list;
@@ -173,8 +159,7 @@ function displayProjectsSection(projects) {
 function displayEducationSection(education) {
   if (!education) return;
   const title = education.title;
-  const h2 = $('<h2>', { text: title });
-  $('.education').append(h2);
+  $('.education h2').text(title);
 
   const educationalBackground = education.educational_background;
 

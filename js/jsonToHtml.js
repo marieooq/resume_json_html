@@ -81,8 +81,7 @@ function displaySummarySection(summary) {
 function displayWorkExperienceSection(workExperience) {
   if (!workExperience) return;
   const title = workExperience.title;
-  const h2 = $('<h2>', { text: title });
-  $('.work-experience').append(h2);
+  $('.work-experience h2').text(title);
 
   const careers = workExperience.career;
 

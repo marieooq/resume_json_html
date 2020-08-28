@@ -37,8 +37,8 @@ function displayContactSection(contact) {
   if (!contact) return;
 
   contact.forEach((val, index)=> {
-    const title = val.item_title;
-    const content = val.item_content;
+    const title = val.itemTitle;
+    const content = val.itemContent;
 
     const li = $('<li>', { text: `${title} - ` });
 
@@ -94,8 +94,8 @@ function displayWorkExperienceSection(workExperience) {
       $('.career').append(h3);
     }
 
-    if (careerVal.company_description) {
-      const companyDescription = careerVal.company_description;
+    if (careerVal.companyDescription) {
+      const companyDescription = careerVal.companyDescription;
       const h4 = $('<h4>', { text: companyDescription });
       $('.career').append(h4);
     }
@@ -124,13 +124,13 @@ function displayProjectsSection(projects) {
   const title = projects.title;
   $('.projects h2').text(title);
 
-  if (projects.project_list) {
-    const projectList = projects.project_list;
+  if (projects.projectList) {
+    const projectList = projects.projectList;
 
     projectList.forEach(val => {
       const project = $('<div>', { class: 'project' });
-      const projectName = val.project_name;
-      const projectUrl = val.project_url;
+      const projectName = val.projectName;
+      const projectUrl = val.projectUrl;
       const description = val.description;
 
       const h3 = $('<h3>', { text: projectName });
@@ -161,7 +161,7 @@ function displayEducationSection(education) {
   const title = education.title;
   $('.education h2').text(title);
 
-  const educationalBackground = education.educational_background;
+  const educationalBackground = education.EducationalBackground;
 
   educationalBackground.forEach(val => {
     const major = val.major;

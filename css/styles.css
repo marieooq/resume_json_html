@@ -12,12 +12,12 @@
 }
 
 :root {
-  --dark_black: #454545;
-  --light_blak: #545454;
-  --header_color: #ff914d;
-  --font_size_1: 20px;
-  --font_size_2: 16px;
-  --font_size_3: 14px;
+  --dark-black: #454545;
+  --light-black: #545454;
+  --header-color: #ff914d;
+  --font-size-1: 20px;
+  --font-size2: 16px;
+  --font-size-3: 14px;
 }
 
 body {
@@ -25,10 +25,10 @@ body {
   font-family: 'PT Sans', sans-serif;
 }
 
-.header_line {
+.header-line {
   width: 100%;
   height: 5mm;
-  background-color: var(--header_color) !important;
+  background-color: var(--header-color) !important;
 }
 
 .container {
@@ -36,7 +36,7 @@ body {
   width: 210mm;
   margin: 0 auto;
   background-color: #fff;
-  color: var(--light_blak);
+  color: var(--light-black);
 }
 
 .inner {
@@ -46,27 +46,27 @@ body {
 
 h1#title {
   font-size: 36px;
-  color: var(--dark_black);
+  color: var(--dark-black);
   margin: 0;
   padding: 0;
 }
 
 h2 {
-  font-size: var(--font_size_1);
+  font-size: var(--font-size-1);
   margin: 0 0 2mm 0;
   padding: 0;
-  color: var(--dark_black);
+  color: var(--dark-black);
 }
 
 h3 {
-  font-size: var(--font_size_2);
+  font-size: var(--font-size2);
   margin: 0 0 1mm 0;
   padding: 0;
-  color: var(--dark_black);
+  color: var(--dark-black);
 }
 
 h4 {
-  font-size: var(--font_size_3);
+  font-size: var(--font-size-3);
   margin: 0;
   padding: 0;
   font-style: italic;
@@ -80,47 +80,47 @@ h4 {
 .contact {
   display: flex;
   /* border-bottom: 1px solid #a6a6a6; */
-  color: var(--dark_black);
+  color: var(--dark-black);
   /* padding-bottom: 3mm; */
 }
 
-.contact_left {
+.contact-left {
   margin-right: 30mm;
 }
 
-ul.contact_ul {
+ul.contact-ul {
   list-style: none;
   margin: 0;
   padding: 0;
-  font-size: var(--font_size_3);
+  font-size: var(--font-size-3);
 }
 
-ul.contact_ul li {
+ul.contact-ul li {
   font-weight: bold;
   margin-bottom: 1mm;
 }
 
-ul.contact_ul li span {
+ul.contact-ul li span {
   font-weight: lighter;
 }
 
-ul.contact_ul li span a {
-  color: var(--dark_black);
+ul.contact-ul li span a {
+  color: var(--dark-black);
 }
 .summary p {
   margin: 0;
   padding: 0;
-  font-size: var(--font_size_3);
+  font-size: var(--font-size-3);
 }
 
 .career {
   margin-bottom: 2mm;
 }
 
-ul.career_ul {
+ul.career-ul {
   margin: 0;
   /* padding: 0; */
-  font-size: var(--font_size_3);
+  font-size: var(--font-size-3);
 }
 
 .project {
@@ -128,7 +128,7 @@ ul.career_ul {
 }
 
 .project h3 {
-  font-size: var(--font_size_1);
+  font-size: var(--font-size-1);
   margin: 0;
   padding: 0;
 }
@@ -138,12 +138,12 @@ ul.career_ul {
 }
 
 .project h3 span a {
-  font-size: var(--font_size_2);
-  color: var(--dark_black);
+  font-size: var(--font-size2);
+  color: var(--dark-black);
 }
 
 .project p {
-  font-size: var(--font_size_3);
+  font-size: var(--font-size-3);
   margin: 0;
   padding: 0;
 }

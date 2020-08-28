@@ -14,10 +14,10 @@ function displayTitle(title) {
 function displayContactSection(contact) {
   if (!contact) return;
   const left = $('<div>', { class: 'contact_left' });
-  const left_ul = $('<ul>', { class: 'contact_ul' });
+  const leftUl = $('<ul>', { class: 'contact_ul' });
 
   const right = $('<div>', { class: 'contact_right' });
-  const right_ul = $('<ul>', { class: 'contact_ul' });
+  const rightUl = $('<ul>', { class: 'contact_ul' });
 
   for (let i = 0; i < contact.length; i++) {
     const title = contact[i].item_title;
@@ -35,16 +35,16 @@ function displayContactSection(contact) {
 
       span.append(a);
       li.append(span);
-      left_ul.append(li);
+      leftUl.append(li);
     } else {
       const span = $('<span>', { text: content });
       li.append(span);
-      right_ul.append(li);
+      rightUl.append(li);
     }
   }
 
-  left.append(left_ul);
-  right.append(right_ul);
+  left.append(leftUl);
+  right.append(rightUl);
 
   $('.contact').append(left, right);
 }
@@ -66,25 +66,25 @@ function displaySummarySection(summary) {
  * display a work experience section
  * @param {object} work_experience
  */
-function displayWorkExperienceSection(work_experience) {
-  if (!work_experience) return;
-  const title = work_experience.title;
+function displayWorkExperienceSection(workExperience) {
+  if (!workExperience) return;
+  const title = workExperience.title;
   const h2 = $('<h2>', { text: title });
   $('.work_experience').append(h2);
 
-  const careers = work_experience.career;
+  const careers = workExperience.career;
 
   for (let i = 0; i < careers.length; i++) {
     const div = $('<div>', { class: 'career' });
 
     if (careers[i].title) {
-      const job_title = careers[i].title;
-      const h3 = $('<h3>', { text: job_title });
+      const jobTitle = careers[i].title;
+      const h3 = $('<h3>', { text: jobTitle });
       div.append(h3);
     }
     if (careers[i].company_description) {
-      const company_description = careers[i].company_description;
-      const h4 = $('<h4>', { text: company_description });
+      const companyDescription = careers[i].company_description;
+      const h4 = $('<h4>', { text: companyDescription });
       div.append(h4);
     }
 
@@ -117,19 +117,19 @@ function displayProjectsSection(projects) {
   }
 
   if (projects.project_list) {
-    const project_list = projects.project_list;
-    for (let i = 0; i < project_list.length; i++) {
+    const projectList = projects.project_list;
+    for (let i = 0; i < projectList.length; i++) {
       const project = $('<div>', { class: 'project' });
-      const project_name = project_list[i].project_name;
-      const project_url = project_list[i].project_url;
-      const description = project_list[i].description;
+      const projectName = projectList[i].project_name;
+      const projectUrl = projectList[i].project_url;
+      const description = projectList[i].description;
 
-      const h3 = $('<h3>', { text: project_name });
+      const h3 = $('<h3>', { text: projectName });
 
       const span = $('<span>');
       const a = $('<a>', {
-        text: `  ${project_url}`,
-        href: project_url,
+        text: `  ${projectUrl}`,
+        href: projectUrl,
         target: '_blank',
       });
 
@@ -153,11 +153,11 @@ function displayEducationSection(education) {
   const h2 = $('<h2>', { text: title });
   $('.education').append(h2);
 
-  const educational_background = education.educational_background;
+  const educationalBackground = education.educational_background;
 
-  for (let i = 0; i < educational_background.length; i++) {
-    const major = educational_background[i].major;
-    const description = ` ${educational_background[i].description}`;
+  for (let i = 0; i < educationalBackground.length; i++) {
+    const major = educationalBackground[i].major;
+    const description = ` ${educationalBackground[i].description}`;
     const h3 = $('<h3>');
     const span = $('<span>', { text: major });
     h3.append(span, description);

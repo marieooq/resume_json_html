@@ -96,7 +96,7 @@ function displayWorkExperienceSection(workExperience) {
 
   const careers = workExperience.career;
 
-  careers.forEach((careerVal) =>{
+  careers.forEach(careerVal =>{
     const div = $('<div>', { class: 'career' });
 
     if (careerVal.title) {
@@ -114,7 +114,7 @@ function displayWorkExperienceSection(workExperience) {
       const ul = $('<ul>', { class: 'career-ul' });
       const achievements = careerVal.achievements;
 
-      achievements.forEach((achievementsVal) => {
+      achievements.forEach(achievementsVal => {
         const li = $('<li>', { text: achievementsVal });
         ul.append(li);
       })
@@ -140,11 +140,12 @@ function displayProjectsSection(projects) {
 
   if (projects.project_list) {
     const projectList = projects.project_list;
-    for (let i = 0; i < projectList.length; i++) {
+
+    projectList.forEach(val => {
       const project = $('<div>', { class: 'project' });
-      const projectName = projectList[i].project_name;
-      const projectUrl = projectList[i].project_url;
-      const description = projectList[i].description;
+      const projectName = val.project_name;
+      const projectUrl = val.project_url;
+      const description = val.description;
 
       const h3 = $('<h3>', { text: projectName });
 
@@ -161,7 +162,7 @@ function displayProjectsSection(projects) {
       h3.append(span);
       project.append(h3, p);
       $('.projects').append(project);
-    }
+    })
   }
 }
 

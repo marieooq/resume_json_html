@@ -96,34 +96,34 @@ function displayWorkExperienceSection(workExperience) {
 
   const careers = workExperience.career;
 
-  for (let i = 0; i < careers.length; i++) {
+  careers.forEach(careerVal =>{
     const div = $('<div>', { class: 'career' });
 
-    if (careers[i].title) {
-      const jobTitle = careers[i].title;
+    if (careerVal.title) {
+      const jobTitle = careerVal.title;
       const h3 = $('<h3>', { text: jobTitle });
       div.append(h3);
     }
-    if (careers[i].company_description) {
-      const companyDescription = careers[i].company_description;
+    if (careerVal.company_description) {
+      const companyDescription = careerVal.company_description;
       const h4 = $('<h4>', { text: companyDescription });
       div.append(h4);
     }
 
-    if (careers[i].achievements) {
+    if (careerVal.achievements) {
       const ul = $('<ul>', { class: 'career-ul' });
-      const achievements = careers[i].achievements;
+      const achievements = careerVal.achievements;
 
-      for (let j = 0; j < achievements.length; j++) {
-        const achievement = achievements[j];
-        const li = $('<li>', { text: achievement });
+      achievements.forEach(achievementsVal => {
+        const li = $('<li>', { text: achievementsVal });
         ul.append(li);
-      }
+      })
+
       div.append(ul);
     }
 
     $('.work-experience').append(div);
-  }
+  })
 }
 
 /**
@@ -140,11 +140,12 @@ function displayProjectsSection(projects) {
 
   if (projects.project_list) {
     const projectList = projects.project_list;
-    for (let i = 0; i < projectList.length; i++) {
+
+    projectList.forEach(val => {
       const project = $('<div>', { class: 'project' });
-      const projectName = projectList[i].project_name;
-      const projectUrl = projectList[i].project_url;
-      const description = projectList[i].description;
+      const projectName = val.project_name;
+      const projectUrl = val.project_url;
+      const description = val.description;
 
       const h3 = $('<h3>', { text: projectName });
 
@@ -161,7 +162,7 @@ function displayProjectsSection(projects) {
       h3.append(span);
       project.append(h3, p);
       $('.projects').append(project);
-    }
+    })
   }
 }
 
@@ -177,12 +178,12 @@ function displayEducationSection(education) {
 
   const educationalBackground = education.educational_background;
 
-  for (let i = 0; i < educationalBackground.length; i++) {
-    const major = educationalBackground[i].major;
-    const description = ` ${educationalBackground[i].description}`;
+  educationalBackground.forEach(val => {
+    const major = val.major;
+    const description = ` ${val.description}`;
     const h3 = $('<h3>');
     const span = $('<span>', { text: major });
     h3.append(span, description);
     $('.education').append(h3);
-  }
+  })
 }

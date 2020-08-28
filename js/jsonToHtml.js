@@ -1,3 +1,25 @@
+$(function () {
+  $.getJSON('../resume.json', function (data) {
+    //display a title
+    displayTitle(data.title);
+
+    // display a contact section
+    displayContactSection(data.contact);
+
+    //display a summary section
+    displaySummarySection(data.summary);
+
+    //display a work experience section
+    displayWorkExperienceSection(data.work_experience);
+
+    //display a projects section
+    displayProjectsSection(data.projects);
+
+    //display an education section
+    displayEducationSection(data.education);
+  });
+});
+
 /**
  * display a title of a resume
  * @param {string} title
@@ -164,25 +186,3 @@ function displayEducationSection(education) {
     $('.education').append(h3);
   }
 }
-
-$(function () {
-  $.getJSON('../resume.json', function (data) {
-    //display a title
-    displayTitle(data.title);
-
-    // display a contact section
-    displayContactSection(data.contact);
-
-    //display a summary section
-    displaySummarySection(data.summary);
-
-    //display a work experience section
-    displayWorkExperienceSection(data.work_experience);
-
-    //display a projects section
-    displayProjectsSection(data.projects);
-
-    //display an education section
-    displayEducationSection(data.education);
-  });
-});

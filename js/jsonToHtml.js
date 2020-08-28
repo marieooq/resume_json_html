@@ -178,12 +178,12 @@ function displayEducationSection(education) {
 
   const educationalBackground = education.educational_background;
 
-  for (let i = 0; i < educationalBackground.length; i++) {
-    const major = educationalBackground[i].major;
-    const description = ` ${educationalBackground[i].description}`;
+  educationalBackground.forEach(val => {
+    const major = val.major;
+    const description = ` ${val.description}`;
     const h3 = $('<h3>');
     const span = $('<span>', { text: major });
     h3.append(span, description);
     $('.education').append(h3);
-  }
+  })
 }

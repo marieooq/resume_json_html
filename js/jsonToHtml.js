@@ -13,11 +13,11 @@ function displayTitle(title) {
  */
 function displayContactSection(contact) {
   if (!contact) return;
-  const left = $('<div>', { class: 'contact_left' });
-  const leftUl = $('<ul>', { class: 'contact_ul' });
+  const left = $('<div>', { class: 'contact-left' });
+  const leftUl = $('<ul>', { class: 'contact-ul' });
 
   const right = $('<div>', { class: 'contact_right' });
-  const rightUl = $('<ul>', { class: 'contact_ul' });
+  const rightUl = $('<ul>', { class: 'contact-ul' });
 
   for (let i = 0; i < contact.length; i++) {
     const title = contact[i].item_title;
@@ -70,7 +70,7 @@ function displayWorkExperienceSection(workExperience) {
   if (!workExperience) return;
   const title = workExperience.title;
   const h2 = $('<h2>', { text: title });
-  $('.work_experience').append(h2);
+  $('.work-experience').append(h2);
 
   const careers = workExperience.career;
 
@@ -89,7 +89,7 @@ function displayWorkExperienceSection(workExperience) {
     }
 
     if (careers[i].achievements) {
-      const ul = $('<ul>', { class: 'career_ul' });
+      const ul = $('<ul>', { class: 'career-ul' });
       const achievements = careers[i].achievements;
 
       for (let j = 0; j < achievements.length; j++) {
@@ -100,7 +100,7 @@ function displayWorkExperienceSection(workExperience) {
       div.append(ul);
     }
 
-    $('.work_experience').append(div);
+    $('.work-experience').append(div);
   }
 }
 

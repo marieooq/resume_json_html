@@ -69,9 +69,9 @@ function displaySummarySection(summary) {
   if (!summary) return;
   const title = summary.title;
   const content = summary.content;
-  const h2 = $('<h2>', { text: title });
-  const p = $('<p>', { text: content });
-  $('.summary').append(h2, p);
+
+  $('.summary h2').text(title);
+  $('.summary h2').text(content);
 }
 
 /**

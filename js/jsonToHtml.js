@@ -71,7 +71,7 @@ function displaySummarySection(summary) {
   const content = summary.content;
 
   $('.summary h2').text(title);
-  $('.summary h2').text(content);
+  $('.summary p').text(content);
 }
 
 /**
@@ -86,17 +86,18 @@ function displayWorkExperienceSection(workExperience) {
   const careers = workExperience.career;
 
   careers.forEach(careerVal =>{
-    const div = $('<div>', { class: 'career' });
 
+    const jobTitle = careerVal.title;
     if (careerVal.title) {
       const jobTitle = careerVal.title;
       const h3 = $('<h3>', { text: jobTitle });
-      div.append(h3);
+      $('.career').append(h3);
     }
+
     if (careerVal.company_description) {
       const companyDescription = careerVal.company_description;
       const h4 = $('<h4>', { text: companyDescription });
-      div.append(h4);
+      $('.career').append(h4);
     }
 
     if (careerVal.achievements) {
@@ -108,10 +109,8 @@ function displayWorkExperienceSection(workExperience) {
         ul.append(li);
       })
 
-      div.append(ul);
+      $('.career').append(ul);
     }
-
-    $('.work-experience').append(div);
   })
 }
 

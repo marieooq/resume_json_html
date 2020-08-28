@@ -120,11 +120,9 @@ function displayWorkExperienceSection(workExperience) {
  */
 function displayProjectsSection(projects) {
   if (!projects) return;
-  if (projects.title) {
-    const title = projects.title;
-    const h2 = $('<h2>', { text: title });
-    $('.projects').append(h2);
-  }
+
+  const title = projects.title;
+  $('.projects h2').text(title);
 
   if (projects.project_list) {
     const projectList = projects.project_list;

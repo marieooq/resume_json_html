@@ -41,13 +41,13 @@ function displayContactSection(contact) {
   const right = $('<div>', { class: 'contact_right' });
   const rightUl = $('<ul>', { class: 'contact-ul' });
 
-  for (let i = 0; i < contact.length; i++) {
-    const title = contact[i].item_title;
-    const content = contact[i].item_content;
+  contact.forEach((val, index)=> {
+    const title = val.item_title;
+    const content = val.item_content;
 
     const li = $('<li>', { text: `${title} - ` });
 
-    if (i < 3) {
+    if (index < 3) {
       const span = $('<span>');
       const a = $('<a>', {
         text: content,
@@ -63,7 +63,7 @@ function displayContactSection(contact) {
       li.append(span);
       rightUl.append(li);
     }
-  }
+  })
 
   left.append(leftUl);
   right.append(rightUl);

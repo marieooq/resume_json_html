@@ -96,34 +96,34 @@ function displayWorkExperienceSection(workExperience) {
 
   const careers = workExperience.career;
 
-  for (let i = 0; i < careers.length; i++) {
+  careers.forEach((careerVal) =>{
     const div = $('<div>', { class: 'career' });
 
-    if (careers[i].title) {
-      const jobTitle = careers[i].title;
+    if (careerVal.title) {
+      const jobTitle = careerVal.title;
       const h3 = $('<h3>', { text: jobTitle });
       div.append(h3);
     }
-    if (careers[i].company_description) {
-      const companyDescription = careers[i].company_description;
+    if (careerVal.company_description) {
+      const companyDescription = careerVal.company_description;
       const h4 = $('<h4>', { text: companyDescription });
       div.append(h4);
     }
 
-    if (careers[i].achievements) {
+    if (careerVal.achievements) {
       const ul = $('<ul>', { class: 'career-ul' });
-      const achievements = careers[i].achievements;
+      const achievements = careerVal.achievements;
 
-      for (let j = 0; j < achievements.length; j++) {
-        const achievement = achievements[j];
-        const li = $('<li>', { text: achievement });
+      achievements.forEach((achievementsVal) => {
+        const li = $('<li>', { text: achievementsVal });
         ul.append(li);
-      }
+      })
+
       div.append(ul);
     }
 
     $('.work-experience').append(div);
-  }
+  })
 }
 
 /**

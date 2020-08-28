@@ -159,8 +159,7 @@ function displayProjectsSection(projects) {
 function displayEducationSection(education) {
   if (!education) return;
   const title = education.title;
-  const h2 = $('<h2>', { text: title });
-  $('.education').append(h2);
+  $('.education h2').text(title);
 
   const educationalBackground = education.educational_background;
 

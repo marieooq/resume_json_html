@@ -35,11 +35,6 @@ function displayTitle(title) {
  */
 function displayContactSection(contact) {
   if (!contact) return;
-  const left = $('<div>', { class: 'contact-left' });
-  const leftUl = $('<ul>', { class: 'contact-ul' });
-
-  const right = $('<div>', { class: 'contact_right' });
-  const rightUl = $('<ul>', { class: 'contact-ul' });
 
   contact.forEach((val, index)=> {
     const title = val.item_title;
@@ -57,18 +52,13 @@ function displayContactSection(contact) {
 
       span.append(a);
       li.append(span);
-      leftUl.append(li);
+      $('.contact-left .contact-ul').append(li);
     } else {
       const span = $('<span>', { text: content });
       li.append(span);
-      rightUl.append(li);
+      $('.contact-right .contact-ul').append(li);
     }
   })
-
-  left.append(leftUl);
-  right.append(rightUl);
-
-  $('.contact').append(left, right);
 }
 
 /**
